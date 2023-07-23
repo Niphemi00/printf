@@ -1,4 +1,9 @@
-# printf
-today i and my partner Adewale Muslim Bello started our project work
+authors : adewale muslim bello
+	: ikem joshua
 
-God willing i hope we do our best and exceed the rest
+
+this is project being handled by i and my team mate
+
+
+God helping we'd over come
+
