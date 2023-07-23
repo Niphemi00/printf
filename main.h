@@ -17,7 +17,6 @@
 /* SIZES */
 #define S_LONG 2
 #define S_SHORT 1
-
 /**
  * struct fmt - Struct op
  *
@@ -29,8 +28,6 @@ struct fmt
 	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
-
-
 /**
  * typedef struct fmt fmt_t - Struct op
  *
@@ -38,22 +35,16 @@ struct fmt
  * @fm_t: The function associated.
  */
 typedef struct fmt fmt_t;
-
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
-
-/****************** FUNCTIONS ******************/
-
-/* Funtions to print chars and strings */
+/* Functions */
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-
-/* Functions to print numbers */
 int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_binary(va_list types, char buffer[],
@@ -105,13 +96,10 @@ int write_pointer(char buffer[], int ind, int length,
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
-
-/****************** UTILS ******************/
+/*UTILS*/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
-
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
-
-#endif /* MAIN_H */
+#endif
